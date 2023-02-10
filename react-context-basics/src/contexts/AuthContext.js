@@ -1,6 +1,6 @@
 import React, { createContext, Component } from 'react'
 
-export const AuthContext = createContext()
+export const AuthContext = createContext();
 
 class AuthContextProvider extends Component {
   state = {
@@ -11,9 +11,7 @@ class AuthContextProvider extends Component {
   }
   render () {
     return (
-      <AuthContext.Provider
-        value={{ ...this.state, toggleAuth: this.toggleAuth }}
-      >
+      <AuthContext.Provider value={{ ...this.state, toggleAuth: this.toggleAuth }}>
         {this.props.children}
       </AuthContext.Provider>
     )
